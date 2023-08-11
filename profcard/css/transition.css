@@ -1,0 +1,85 @@
+.card {
+  position: relative;
+}
+.card:hover .profile::after {
+  height: 8rem;
+}
+.card .profile {
+  padding: 0;
+  position: relative;
+}
+.card .profile::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(22, 19, 19);
+  width: 20rem;
+  height: 0;
+  top: -40px;
+  z-index: -1;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transition: all 600ms;
+}
+.card:hover .social {
+  bottom: 0;
+  opacity: 1;
+}
+.card .social {
+  width: 100%;
+  background-color: rgb(22, 19, 19);
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  bottom: -50px;
+  text-align: center;
+  transition: all 400ms;
+  opacity: 0;
+}
+.card .social li {
+  padding: 10px 0;
+  list-style: none;
+  display: inline-block;
+}
+.card .social li a {
+  padding: 10px;
+  color: white;
+}
+.card .social li a:hover {
+  background-color: white;
+  color: rgb(22, 19, 19);
+  transform: all 500ms;
+}
+.card:hover .profil_photo:after {
+  opacity: 1;
+}
+.card:hover .profil_photo img {
+  transition: all 1s;
+  transform: scale(0.7);
+}
+.card .profil_photo {
+  position: relative;
+  z-index: 0;
+  background-color: black;
+}
+.card .profil_photo:after {
+  position: absolute;
+  content: "";
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  background-color: rgb(249, 246, 239);
+  right: 10px;
+  top: 10px;
+  transition: all 1s;
+  z-index: -1;
+  opacity: 0;
+}
+.card .skills .skill {
+  transition: all 450ms;
+}
+.card .skills .skill:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}/*# sourceMappingURL=transition.css.map */
