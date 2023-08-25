@@ -1,0 +1,194 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: BoldPoppins;
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: ItalicPoppins;
+  src: url("../fonts/Poppins-Italic.ttf");
+}
+@font-face {
+  font-family: LightPoppins;
+  src: url("../fonts/Poppins-Light.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+a {
+  list-style: none;
+  background-color: none;
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: pink;
+  height: 100vh;
+  overflow: hidden;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  color: red;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  height: 100vh;
+}
+
+.box-container {
+  max-width: 60.25rem;
+  min-height: 30.25rem;
+  box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.408);
+  border: 2px solid;
+  display: flex;
+  flex-flow: row wrap;
+}
+.box-container .adversiting {
+  width: 60%;
+  background-color: white;
+}
+.box-container .adversiting .logo {
+  padding: 1rem;
+  position: relative;
+  z-index: 5;
+}
+.box-container .adversiting .logo a {
+  color: brown;
+  font-size: 1.25rem;
+  margin-right: 5px;
+}
+.box-container .adversiting .logo span {
+  line-height: 22px;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  font-family: BoldPoppins;
+}
+.box-container .adversiting .logoPhoto {
+  min-width: 100%;
+  min-height: 30.25rem;
+  position: relative;
+  top: -4rem;
+  z-index: 1;
+}
+.box-container .adversiting .logoPhoto img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  min-height: 30.25rem;
+}
+.box-container .loginPage {
+  width: 40%;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(132, 93, 93);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.box-container .loginPage .user-logo {
+  width: 7.25rem;
+  height: 7.5rem;
+  background-color: #d5d0d0;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.box-container .loginPage .user-logo a {
+  color: rgb(66, 65, 65);
+  font-size: 5rem;
+}
+.box-container .loginPage .input-container {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.box-container .loginPage .input-container .userLogin {
+  max-width: 13rem;
+  padding: 5px;
+  border-radius: 1rem;
+  background-color: #d5d0d0;
+  margin-top: 8px;
+}
+.box-container .loginPage .input-container .userLogin i {
+  margin-right: 5px;
+  font-size: 15px;
+  color: rgb(66, 65, 65);
+}
+.box-container .loginPage .input-container .userLogin .inputUser {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-right: 5px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+.box-container .loginPage .input-container .btn {
+  padding: 5px 3.5rem;
+  border-radius: 1.2rem;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.44);
+  background-color: purple;
+  color: white;
+  letter-spacing: 3px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+.box-container .loginPage .input-container .checkboxs {
+  margin-top: 1rem;
+}
+.box-container .loginPage .input-container .checkboxs .rememberMe {
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid blue;
+  align-items: flex-start;
+}
+.box-container .loginPage .input-container .checkboxs .rememberMe .rememberpoint {
+  min-width: 1rem;
+  min-height: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid rgb(66, 65, 65);
+  position: relative;
+  right: 10px;
+  top: 1px;
+}
+.box-container .loginPage .input-container .checkboxs .rememberMe .rememberpoint::after {
+  content: "";
+  min-width: 7px;
+  min-height: 7px;
+  background-color: gray;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 1000;
+}
+.box-container .loginPage .others .question {
+  color: wheat;
+  line-height: 20px;
+  letter-spacing: 3px;
+}
+.box-container .loginPage .others a {
+  color: rgb(54, 6, 38);
+  font-family: BoldPoppins;
+  letter-spacing: 2.2px;
+  line-height: 22px;
+}/*# sourceMappingURL=style.css.map */
