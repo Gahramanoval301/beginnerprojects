@@ -36,7 +36,6 @@ body {
     background-color: pink;
     height: 100vh;
     overflow: hidden;
-
 }
 
 footer {
@@ -44,7 +43,6 @@ footer {
     justify-content: center;
     align-items: flex-start;
     position: relative;
-
     color: red;
 }
 
@@ -54,18 +52,18 @@ footer {
     align-items: center;
     flex-flow: row wrap;
     height: 100vh;
-
 }
 
+//TODO variables
 $primary: #d5d0d0;
 $second-primary: rgb(66, 65, 65);
+$third-primary: rgb(54, 6, 38);
 
 //! start
 .box-container {
     max-width: 60.25rem;
     min-height: 30.25rem;
     box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.408);
-    border: 2px solid;
     display: flex;
     flex-flow: row wrap;
 
@@ -73,7 +71,6 @@ $second-primary: rgb(66, 65, 65);
     .adversiting {
         width: 60%;
         background-color: white;
-
 
         .logo {
             padding: 1rem;
@@ -109,7 +106,6 @@ $second-primary: rgb(66, 65, 65);
 
             }
         }
-
     }
 
     //! end right-side section
@@ -127,7 +123,6 @@ $second-primary: rgb(66, 65, 65);
         gap: 5px;
 
         .user-logo {
-
             width: 7.25rem;
             height: 7.5rem;
             background-color: $primary;
@@ -137,14 +132,12 @@ $second-primary: rgb(66, 65, 65);
             a {
                 color: rgb(66, 65, 65);
                 font-size: 5rem;
-
             }
         }
 
         .input-container {
             margin-top: 1rem;
             margin-bottom: 1.5rem;
-
 
             .userLogin {
                 max-width: 13rem;
@@ -192,10 +185,16 @@ $second-primary: rgb(66, 65, 65);
                 .rememberMe {
                     display: flex;
                     justify-content: flex-start;
-                    border: 1px solid blue;
+                    // border: 1px solid blue;
                     align-items: flex-start;
 
-                    .rememberpoint {
+                    .remembertext {
+                        color: $third-primary;
+
+
+                    }
+
+                    .remembercheckbox {
                         min-width: 1rem;
                         min-height: 1rem;
                         border-radius: 50%;
@@ -205,6 +204,11 @@ $second-primary: rgb(66, 65, 65);
                         right: 10px;
                         top: 1px;
 
+                        &:checked {
+                            &::after {
+                                background-color: red;
+                            }
+                        }
 
                         &::after {
                             content: "";
@@ -217,15 +221,28 @@ $second-primary: rgb(66, 65, 65);
                             top: 2px;
                             z-index: 1000;
                         }
+                    }
+                }
 
+                .ForgotPassword {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    .forgetcheckbox {
+                        position: relative;
+                        right: 8px;
+                    }
+
+                    .forgettext {
+                        display: inline-block;
+                        color: $third-primary;
                     }
                 }
             }
         }
 
         .others {
-
-
             .question {
                 color: wheat;
                 line-height: 20px;
@@ -233,7 +250,7 @@ $second-primary: rgb(66, 65, 65);
             }
 
             a {
-                color: rgb(54, 6, 38);
+                color: $third-primary;
                 font-family: BoldPoppins;
                 letter-spacing: 2.2px;
                 line-height: 22px;

@@ -54,7 +54,6 @@ footer {
   max-width: 60.25rem;
   min-height: 30.25rem;
   box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.408);
-  border: 2px solid;
   display: flex;
   flex-flow: row wrap;
 }
@@ -157,10 +156,12 @@ footer {
 .box-container .loginPage .input-container .checkboxs .rememberMe {
   display: flex;
   justify-content: flex-start;
-  border: 1px solid blue;
   align-items: flex-start;
 }
-.box-container .loginPage .input-container .checkboxs .rememberMe .rememberpoint {
+.box-container .loginPage .input-container .checkboxs .rememberMe .remembertext {
+  color: rgb(54, 6, 38);
+}
+.box-container .loginPage .input-container .checkboxs .rememberMe .remembercheckbox {
   min-width: 1rem;
   min-height: 1rem;
   border-radius: 50%;
@@ -170,7 +171,10 @@ footer {
   right: 10px;
   top: 1px;
 }
-.box-container .loginPage .input-container .checkboxs .rememberMe .rememberpoint::after {
+.box-container .loginPage .input-container .checkboxs .rememberMe .remembercheckbox:checked::after {
+  background-color: red;
+}
+.box-container .loginPage .input-container .checkboxs .rememberMe .remembercheckbox::after {
   content: "";
   min-width: 7px;
   min-height: 7px;
@@ -180,6 +184,19 @@ footer {
   left: 2px;
   top: 2px;
   z-index: 1000;
+}
+.box-container .loginPage .input-container .checkboxs .ForgotPassword {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.box-container .loginPage .input-container .checkboxs .ForgotPassword .forgetcheckbox {
+  position: relative;
+  right: 8px;
+}
+.box-container .loginPage .input-container .checkboxs .ForgotPassword .forgettext {
+  display: inline-block;
+  color: rgb(54, 6, 38);
 }
 .box-container .loginPage .others .question {
   color: wheat;
