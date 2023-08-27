@@ -54,7 +54,7 @@ footer {
     height: 100vh;
 }
 
-//TODO variables
+//* variables
 $primary: #d5d0d0;
 $second-primary: rgb(66, 65, 65);
 $third-primary: rgb(54, 6, 38);
@@ -71,6 +71,48 @@ $third-primary: rgb(54, 6, 38);
     .adversiting {
         width: 60%;
         background-color: white;
+
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+
+            &:hover {
+                .drop-content {
+                    display: block;
+                }
+            }
+
+            .drop-content {
+                display: none;
+                position: absolute;
+                z-index: 10000;
+                background-color: $primary;
+                min-width: 14rem;
+                box-shadow: 0 0 20px black;
+
+                li {
+                    list-style: none;
+                }
+
+                a {
+                    color: $third-primary;
+                    padding: 12px 16px;
+                    display: block;
+                    font-weight: 500;
+                    font-family: cursive;
+                    font-size: 18px;
+
+                    &:hover {
+                        background-color: $second-primary;
+                        color: $primary;
+                    }
+
+                }
+
+            }
+
+        }
 
         .logo {
             padding: 1rem;
@@ -180,81 +222,115 @@ $third-primary: rgb(54, 6, 38);
 
             //* style of checkboxs
             .checkboxs {
-                margin-top: 1rem;
+                margin-top: 10px;
 
-                .rememberMe {
+                .checkbox {
                     display: flex;
-                    justify-content: flex-start;
-                    // border: 1px solid blue;
-                    align-items: flex-start;
+                    cursor: pointer;
+                    position: relative;
 
-                    .remembertext {
-                        color: $third-primary;
+                    &:hover {
+                        .checkmark {
+                            background-color: grey;
+                        }
 
 
                     }
 
-                    .remembercheckbox {
-                        min-width: 1rem;
-                        min-height: 1rem;
-                        border-radius: 50%;
-                        background-color: white;
-                        border: 3px solid $second-primary;
+                    input {
+                        margin-right: 5px;
                         position: relative;
-                        right: 10px;
-                        top: 1px;
+                        opacity: 0;
+                        cursor: pointer;
 
                         &:checked {
-                            &::after {
-                                background-color: red;
+                            ~.checkmark::after {
+                                opacity: 1;
                             }
+
+                            ~.checkmark {
+                                background-color: $third-primary;
+
+
+                            }
+
                         }
+
+
+                    }
+
+                    .checkmark {
+                        position: absolute;
+                        height: 12px;
+                        width: 12px;
+                        background-color: #eee;
+                        border-radius: 50%;
+                        left: 1px;
+                        top: 6px;
+                        opacity: 1;
+                        z-index: 10;
 
                         &::after {
                             content: "";
-                            min-width: 7px;
-                            min-height: 7px;
-                            background-color: gray;
-                            border-radius: 50%;
+                            opacity: 0;
                             position: absolute;
-                            left: 2px;
-                            top: 2px;
+                            width: 5px;
+                            height: 5px;
+                            box-shadow: 0 0 5px rgba(0, 0, 0, 0.365);
+                            border-radius: 50%;
+                            background-color: #eee;
                             z-index: 1000;
+                            top: 3px;
+                            left: 3px;
                         }
+
                     }
                 }
-
-                .ForgotPassword {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-
-                    .forgetcheckbox {
-                        position: relative;
-                        right: 8px;
-                    }
-
-                    .forgettext {
-                        display: inline-block;
-                        color: $third-primary;
-                    }
-                }
-            }
-        }
-
-        .others {
-            .question {
-                color: wheat;
-                line-height: 20px;
-                letter-spacing: 3px;
-            }
-
-            a {
-                color: $third-primary;
-                font-family: BoldPoppins;
-                letter-spacing: 2.2px;
-                line-height: 22px;
             }
         }
     }
 }
+
+.others {
+    .question {
+        color: wheat;
+        line-height: 20px;
+        letter-spacing: 3px;
+    }
+
+    a {
+        color: $third-primary;
+        font-family: BoldPoppins;
+        letter-spacing: 2.2px;
+        line-height: 22px;
+    }
+}
+
+
+
+
+// min-width: 1rem;
+// min-height: 1rem;
+// border-radius: 50%;
+// background-color: white;
+// border: 3px solid $second-primary;
+// position: relative;
+// right: 10px;
+// top: 1px;
+
+// &:checked {
+//     &::after {
+//         background-color: red;
+//     }
+// }
+
+// &::after {
+//     content: "";
+//     min-width: 7px;
+//     min-height: 7px;
+//     background-color: gray;
+//     border-radius: 50%;
+//     position: absolute;
+//     left: 2px;
+//     top: 2px;
+//     z-index: 1000;

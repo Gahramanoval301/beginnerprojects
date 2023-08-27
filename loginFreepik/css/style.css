@@ -61,6 +61,36 @@ footer {
   width: 60%;
   background-color: white;
 }
+.box-container .adversiting .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.box-container .adversiting .dropdown:hover .drop-content {
+  display: block;
+}
+.box-container .adversiting .dropdown .drop-content {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  background-color: #d5d0d0;
+  min-width: 14rem;
+  box-shadow: 0 0 20px black;
+}
+.box-container .adversiting .dropdown .drop-content li {
+  list-style: none;
+}
+.box-container .adversiting .dropdown .drop-content a {
+  color: rgb(54, 6, 38);
+  padding: 12px 16px;
+  display: block;
+  font-weight: 500;
+  font-family: cursive;
+  font-size: 18px;
+}
+.box-container .adversiting .dropdown .drop-content a:hover {
+  background-color: rgb(66, 65, 65);
+  color: #d5d0d0;
+}
 .box-container .adversiting .logo {
   padding: 1rem;
   position: relative;
@@ -151,59 +181,59 @@ footer {
   margin-top: 2rem;
 }
 .box-container .loginPage .input-container .checkboxs {
-  margin-top: 1rem;
+  margin-top: 10px;
 }
-.box-container .loginPage .input-container .checkboxs .rememberMe {
+.box-container .loginPage .input-container .checkboxs .checkbox {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.box-container .loginPage .input-container .checkboxs .rememberMe .remembertext {
-  color: rgb(54, 6, 38);
-}
-.box-container .loginPage .input-container .checkboxs .rememberMe .remembercheckbox {
-  min-width: 1rem;
-  min-height: 1rem;
-  border-radius: 50%;
-  background-color: white;
-  border: 3px solid rgb(66, 65, 65);
+  cursor: pointer;
   position: relative;
-  right: 10px;
-  top: 1px;
 }
-.box-container .loginPage .input-container .checkboxs .rememberMe .remembercheckbox:checked::after {
-  background-color: red;
+.box-container .loginPage .input-container .checkboxs .checkbox:hover .checkmark {
+  background-color: grey;
 }
-.box-container .loginPage .input-container .checkboxs .rememberMe .remembercheckbox::after {
-  content: "";
-  min-width: 7px;
-  min-height: 7px;
-  background-color: gray;
-  border-radius: 50%;
+.box-container .loginPage .input-container .checkboxs .checkbox input {
+  margin-right: 5px;
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+}
+.box-container .loginPage .input-container .checkboxs .checkbox input:checked ~ .checkmark::after {
+  opacity: 1;
+}
+.box-container .loginPage .input-container .checkboxs .checkbox input:checked ~ .checkmark {
+  background-color: rgb(54, 6, 38);
+}
+.box-container .loginPage .input-container .checkboxs .checkbox .checkmark {
   position: absolute;
-  left: 2px;
-  top: 2px;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+  border-radius: 50%;
+  left: 1px;
+  top: 6px;
+  opacity: 1;
+  z-index: 10;
+}
+.box-container .loginPage .input-container .checkboxs .checkbox .checkmark::after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.365);
+  border-radius: 50%;
+  background-color: #eee;
   z-index: 1000;
+  top: 3px;
+  left: 3px;
 }
-.box-container .loginPage .input-container .checkboxs .ForgotPassword {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.box-container .loginPage .input-container .checkboxs .ForgotPassword .forgetcheckbox {
-  position: relative;
-  right: 8px;
-}
-.box-container .loginPage .input-container .checkboxs .ForgotPassword .forgettext {
-  display: inline-block;
-  color: rgb(54, 6, 38);
-}
-.box-container .loginPage .others .question {
+
+.others .question {
   color: wheat;
   line-height: 20px;
   letter-spacing: 3px;
 }
-.box-container .loginPage .others a {
+.others a {
   color: rgb(54, 6, 38);
   font-family: BoldPoppins;
   letter-spacing: 2.2px;

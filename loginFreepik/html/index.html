@@ -17,9 +17,19 @@
             <!--!  start left-side section -->
             <div class="adversiting">
 
-                <div class="logo">
-                    <a href=""><i class="fa-solid fa-bars"></i></a>
-                    <span>LOGO</span>
+                <div class="dropdown">
+                    <div class="logo dropbtn">
+                        <a href=""><i class="fa-solid fa-bars"></i></a>
+                        <span>LOGO</span>
+                    </div>
+                    <div class="drop-content">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+
+                    </div>
                 </div>
                 <div class="logoPhoto"><img src="../photos/loginPhoto.jpg" alt="login photo"></div>
             </div>
@@ -31,15 +41,17 @@
                 </div>
 
                 <div class="input-container">
-                    <div class="userLogin"><input class="inputUser" type="text" name="" id=""><i
-                            class="fa-regular fa-user"></i></div>
-                    <div class="userLogin"><input class="inputUser" type="password" name="" id=""><i
-                            class="fa-solid fa-lock"></i></div>
+                    <div class="userLogin"><input class="inputUser" type="text" name="username" id="username"
+                            placeholder="username"><i class="fa-regular fa-user"></i></div>
+                    <div class="userLogin"><input class="inputUser" type="password" name="password" id="password"
+                            placeholder="password"><i class="fa-solid fa-lock"></i></div>
                     <div class="checkboxs">
-                        <div class="rememberMe"><a class="remembercheckbox"></a>
-                            <p class="remembertext">Remember me</p>
+                        <div class="checkbox"><input type="radio" name="remember-password" id="remember">
+                            <span class="checkmark"></span>
+                            <p class="remembertext">Remember Me</p>
                         </div>
-                        <div class="ForgotPassword"><input class="forgetcheckbox" type="checkbox" name="" id="">
+                        <div class="checkbox"><input type="radio" name="forgot-password" id="forget">
+                            <span class="checkmark"></span>
                             <p class="forgettext">Forgot Password</p>
                         </div>
                     </div>
