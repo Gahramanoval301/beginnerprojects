@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            width: 60vw;
+            height: 60vh;
+            border: 5px double red;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 150px auto 0;
+
+
+        }
+
+        .heart {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: beat 1s infinite;
+            bottom: 27%;
+            right: 10%;
+
+
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            width: 200px;
+            height: 320px;
+            border-radius: 40% 120%;
+            background: red;
+            position: absolute;
+        }
+
+        .heart:before {
+            left: -3rem;
+            top: 0;
+        }
+
+        .heart:after {
+            border-radius: 120% 40%;
+            left: 3rem;
+            top: 0;
+        }
+
+        @keyframes beat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heart"></div>
+    </div>
+
+
+</body>
+
+</html>
