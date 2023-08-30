@@ -29,17 +29,9 @@ a {
 }
 
 body {
-  background-color: pink;
+  background-image: linear-gradient(to right, rgb(150, 106, 106), rgb(218, 167, 175));
   height: 100vh;
   overflow: hidden;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  color: red;
 }
 
 .container {
@@ -138,6 +130,10 @@ footer {
   background-color: #d5d0d0;
   border-radius: 50%;
   margin: 0 auto;
+  transition: all 500ms;
+}
+.box-container .loginPage .user-logo:hover {
+  transform: scale(1.1);
 }
 .box-container .loginPage .user-logo a {
   color: rgb(66, 65, 65);
@@ -179,6 +175,10 @@ footer {
   letter-spacing: 3px;
   cursor: pointer;
   margin-top: 2rem;
+  transition: all 500ms;
+}
+.box-container .loginPage .input-container .btn:hover {
+  background-color: rgb(54, 6, 38);
 }
 .box-container .loginPage .input-container .checkboxs {
   margin-top: 10px;
@@ -198,7 +198,7 @@ footer {
   cursor: pointer;
 }
 .box-container .loginPage .input-container .checkboxs .checkbox input:checked ~ .checkmark::after {
-  opacity: 1;
+  display: inline-block;
 }
 .box-container .loginPage .input-container .checkboxs .checkbox input:checked ~ .checkmark {
   background-color: rgb(54, 6, 38);
@@ -211,12 +211,12 @@ footer {
   border-radius: 50%;
   left: 1px;
   top: 6px;
-  opacity: 1;
   z-index: 10;
+  opacity: 1;
 }
 .box-container .loginPage .input-container .checkboxs .checkbox .checkmark::after {
+  display: none;
   content: "";
-  opacity: 0;
   position: absolute;
   width: 5px;
   height: 5px;
@@ -224,8 +224,8 @@ footer {
   border-radius: 50%;
   background-color: #eee;
   z-index: 1000;
-  top: 3px;
-  left: 3px;
+  top: 3.3px;
+  left: 3.7px;
 }
 
 .others .question {
@@ -233,9 +233,38 @@ footer {
   line-height: 20px;
   letter-spacing: 3px;
 }
+.others .question:hover {
+  color: rgb(237, 196, 119);
+}
 .others a {
   color: rgb(54, 6, 38);
   font-family: BoldPoppins;
   letter-spacing: 2.2px;
   line-height: 22px;
+}
+
+@media screen and (max-width: 597px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .box-container {
+    display: block;
+  }
+  .box-container .adversiting {
+    width: 100%;
+  }
+  .box-container .loginPage {
+    width: 100%;
+  }
+  .box-container footer .footer {
+    display: block;
+  }
+}
+@media screen and (min-width: 1140px) {
+  footer {
+    align-self: flex-end;
+    position: relative;
+    bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

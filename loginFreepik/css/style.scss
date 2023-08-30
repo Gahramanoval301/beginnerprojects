@@ -33,18 +33,11 @@ a {
 }
 
 body {
-    background-color: pink;
+    background-image: linear-gradient(to right, rgb(150, 106, 106), rgb(218, 167, 175));
     height: 100vh;
     overflow: hidden;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    color: red;
-}
 
 .container {
     display: flex;
@@ -170,6 +163,12 @@ $third-primary: rgb(54, 6, 38);
             background-color: $primary;
             border-radius: 50%;
             margin: 0 auto;
+            transition: all 500ms;
+
+
+            &:hover {
+                transform: scale(1.1);
+            }
 
             a {
                 color: rgb(66, 65, 65);
@@ -218,6 +217,11 @@ $third-primary: rgb(54, 6, 38);
                 letter-spacing: 3px;
                 cursor: pointer;
                 margin-top: 2rem;
+                transition: all 500ms;
+
+                &:hover {
+                    background-color: $third-primary;
+                }
             }
 
             //* style of checkboxs
@@ -245,18 +249,13 @@ $third-primary: rgb(54, 6, 38);
 
                         &:checked {
                             ~.checkmark::after {
-                                opacity: 1;
+                                display: inline-block;
                             }
 
                             ~.checkmark {
                                 background-color: $third-primary;
-
-
                             }
-
                         }
-
-
                     }
 
                     .checkmark {
@@ -267,12 +266,12 @@ $third-primary: rgb(54, 6, 38);
                         border-radius: 50%;
                         left: 1px;
                         top: 6px;
-                        opacity: 1;
                         z-index: 10;
+                        opacity: 1;
 
                         &::after {
+                            display: none;
                             content: "";
-                            opacity: 0;
                             position: absolute;
                             width: 5px;
                             height: 5px;
@@ -280,10 +279,9 @@ $third-primary: rgb(54, 6, 38);
                             border-radius: 50%;
                             background-color: #eee;
                             z-index: 1000;
-                            top: 3px;
-                            left: 3px;
+                            top: 3.3px;
+                            left: 3.7px;
                         }
-
                     }
                 }
             }
@@ -296,6 +294,10 @@ $third-primary: rgb(54, 6, 38);
         color: wheat;
         line-height: 20px;
         letter-spacing: 3px;
+
+        &:hover {
+            color: rgb(237, 196, 119);
+        }
     }
 
     a {
@@ -306,6 +308,43 @@ $third-primary: rgb(54, 6, 38);
     }
 }
 
+//! ---------RESPONSIVE SIDE
+
+@media screen and (max-width: 597px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .box-container {
+        display: block;
+
+        .adversiting {
+            width: 100%;
+        }
+
+        .loginPage {
+            width: 100%;
+
+
+        }
+
+        footer {
+            .footer {
+                display: block;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 1140px) {
+    footer {
+        align-self: flex-end;
+        position: relative;
+        bottom: 20px;
+    }
+}
 
 
 
