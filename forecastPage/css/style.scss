@@ -1,0 +1,264 @@
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: BoldPoppins;
+    src: url('../fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: LightPoppins;
+    src: url('../fonts/Poppins-Light.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    color: white;
+
+}
+
+body {
+    background-image: linear-gradient(135deg, rgb(199, 44, 122), rgb(161, 76, 161), rgb(79, 3, 79));
+
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+//!------------VARIABLES
+$primary: white;
+$second-primary: darkslategray;
+$third-primary: rgb(189, 170, 170);
+$general-padding: 15px 25px;
+
+.case {
+    line-height: 22px;
+    color: white;
+    font-family: LightPoppins;
+
+}
+
+//!  ------------HEADER SIDE 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgb(43, 2, 43);
+    padding: 10px;
+
+    .date {
+        margin-inline: auto;
+        font-size: 1.5rem;
+
+    }
+
+
+    .logo_side {
+        margin-left: 18px;
+
+        .logo {
+            display: flex;
+
+
+            .logo_name {
+                font-size: 1rem;
+                margin-inline: 30px;
+                align-self: center;
+            }
+
+
+        }
+
+        img {
+            width: 100%;
+            max-width: 4rem;
+            min-width: 3rem;
+            min-height: 3rem;
+            object-fit: cover;
+        }
+    }
+}
+
+//!------  DROPDOWn
+.dropwdown {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+        .dropdown-content {
+            display: block;
+        }
+    }
+
+    .dropwdown-btn {
+
+        .menu {
+            color: $primary;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 14rem;
+        background-color: $second-primary;
+        z-index: 10;
+        box-shadow: 0 0 20px black;
+
+        li {
+            padding: 0.7rem;
+
+            &:hover {
+
+                background-color: #ccc;
+
+                a {
+                    color: black;
+                }
+            }
+        }
+
+
+
+
+    }
+}
+
+//! ------------MAIN SIDE
+main {
+    .card-container {
+        max-width: 70vw;
+        max-height: 36rem;
+        margin: auto;
+        box-shadow: 10px 5px 20px black;
+
+
+        .card-text {
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            //! ------------------FIRST SECTION
+            .first_section {
+                background-image: url('../photos/france.webp');
+                background-repeat: no-repeat;
+                background-clip: border-box;
+                background-position: center;
+                padding: $general-padding;
+                min-width: 100%;
+                min-height: 18rem;
+                background-color: green;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .weather {
+                    max-width: 100%;
+                    display: flex;
+                    flex-flow: column wrap;
+
+                    .weather_degree {
+                        display: block;
+                        margin-left: 2rem;
+
+                        span {
+                            font-size: 6rem;
+                        }
+
+                        .case {
+                            text-align: center;
+                            margin-top: -15px;
+                        }
+
+                    }
+
+                    .cases {
+                        max-width: 100%;
+                        margin-top: 10px;
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: space-evenly;
+
+                        .weather-case1 {
+
+                            display: relative;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 1px;
+                                height: 3rem;
+                                background-color: $third-primary ;
+                                display: none;
+
+
+                            }
+
+
+
+                        }
+
+                    }
+                }
+
+                .location {
+                    width: 30%;
+                    align-self: center;
+                    position: relative;
+
+                    p {
+
+                        color: $primary;
+                        line-height: 22px;
+                        letter-spacing: 5px;
+                        font-size: 2rem;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 5rem;
+                            height: 4px;
+                            background-color: $primary ;
+                            border-radius: 2rem;
+                            bottom: -15px;
+                            left: 2rem;
+
+
+
+                        }
+
+                    }
+                }
+
+            }
+
+            //! ------------------ SECOND SECTION
+            .second_section {
+                min-width: 100%;
+                min-height: 50%;
+                background-color: red;
+
+
+            }
+
+
+
+        }
+    }
+}

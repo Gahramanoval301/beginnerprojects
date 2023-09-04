@@ -1,0 +1,178 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: BoldPoppins;
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: LightPoppins;
+  src: url("../fonts/Poppins-Light.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+  color: white;
+}
+
+body {
+  background-image: linear-gradient(135deg, #c72c7a, #a14ca1, #4f034f);
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.case {
+  line-height: 22px;
+  color: #bdaaaa;
+  font-family: LightPoppins;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #2b022b;
+  padding: 10px;
+}
+nav .date {
+  margin-inline: auto;
+  font-size: 1.5rem;
+}
+nav .logo_side {
+  margin-left: 18px;
+}
+nav .logo_side .logo {
+  display: flex;
+}
+nav .logo_side .logo .logo_name {
+  font-size: 1rem;
+  margin-inline: 30px;
+  align-self: center;
+}
+nav .logo_side img {
+  width: 100%;
+  max-width: 4rem;
+  min-width: 3rem;
+  min-height: 3rem;
+  object-fit: cover;
+}
+
+.dropwdown {
+  position: relative;
+  display: inline-block;
+}
+.dropwdown:hover .dropdown-content {
+  display: block;
+}
+.dropwdown .dropwdown-btn .menu {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.dropwdown .dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 14rem;
+  background-color: darkslategray;
+  z-index: 10;
+  box-shadow: 0 0 20px black;
+}
+.dropwdown .dropdown-content li {
+  padding: 0.7rem;
+}
+.dropwdown .dropdown-content li:hover {
+  background-color: #ccc;
+}
+.dropwdown .dropdown-content li:hover a {
+  color: black;
+}
+
+main .card-container {
+  max-width: 70vw;
+  max-height: 36rem;
+  margin: auto;
+  box-shadow: 10px 5px 20px black;
+}
+main .card-container .card-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+main .card-container .card-text .first_section {
+  padding: 15px 25px;
+  min-width: 100%;
+  min-height: 50%;
+  background-color: green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .card-container .card-text .first_section .weather {
+  max-width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+}
+main .card-container .card-text .first_section .weather .weather_degree {
+  display: block;
+  margin-left: 2rem;
+}
+main .card-container .card-text .first_section .weather .weather_degree span {
+  font-size: 6rem;
+}
+main .card-container .card-text .first_section .weather .weather_degree .case {
+  text-align: center;
+  margin-top: -15px;
+}
+main .card-container .card-text .first_section .weather .cases {
+  max-width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+main .card-container .card-text .first_section .weather .cases .weather-case1 {
+  display: relative;
+}
+main .card-container .card-text .first_section .weather .cases .weather-case1::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 3rem;
+  background-color: #bdaaaa;
+  display: none;
+}
+main .card-container .card-text .first_section .location {
+  width: 30%;
+  align-self: center;
+  position: relative;
+}
+main .card-container .card-text .first_section .location p {
+  color: white;
+  line-height: 22px;
+  letter-spacing: 5px;
+  font-size: 2rem;
+}
+main .card-container .card-text .first_section .location p::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 2px;
+  background-color: white;
+  bottom: -15px;
+  left: 2rem;
+}
+main .card-container .card-text .second_section {
+  min-width: 100%;
+  min-height: 50%;
+  background-color: red;
+}
