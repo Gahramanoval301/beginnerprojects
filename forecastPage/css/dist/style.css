@@ -30,8 +30,21 @@ a {
 
 .case {
   line-height: 22px;
-  color: #bdaaaa;
+  color: white;
   font-family: LightPoppins;
+}
+
+.profil {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #bdaaaa;
+  display: relative;
+  bottom: 20px;
+}
+
+.comments {
+  color: #c4c1c1;
 }
 
 nav {
@@ -109,10 +122,14 @@ main .card-container .card-text {
   flex-wrap: wrap;
 }
 main .card-container .card-text .first_section {
+  background-image: url("../photos/france.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  background-position: center;
   padding: 15px 25px;
   min-width: 100%;
-  min-height: 50%;
-  background-color: green;
+  min-height: 18rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -165,14 +182,55 @@ main .card-container .card-text .first_section .location p {
 main .card-container .card-text .first_section .location p::after {
   content: "";
   position: absolute;
-  width: 3rem;
-  height: 2px;
+  width: 5rem;
+  height: 4px;
   background-color: white;
+  border-radius: 2rem;
   bottom: -15px;
   left: 2rem;
 }
 main .card-container .card-text .second_section {
   min-width: 100%;
-  min-height: 50%;
-  background-color: red;
+  min-height: 18rem;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+}
+main .card-container .card-text .second_section .twitter_side {
+  width: 38%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+main .card-container .card-text .second_section .twitter_side .twitter {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .card-container .card-text .second_section .twitter_side .twitter i {
+  color: #359393;
+  font-size: 2rem;
+  position: relative;
+  top: 6px;
+}
+main .card-container .card-text .second_section .twitter_side .twitter h3 {
+  color: #30143e;
+  font-size: 2rem;
+  margin-left: 5px;
+}
+main .card-container .card-text .second_section .twitter_side .twitter span {
+  font-size: 1rem;
+  color: #ddd;
+}
+main .card-container .card-text .second_section .twitter_side .comment {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .card-container .card-text .second_section .twitter_side .comment .comments {
+  margin-left: 15px;
+}
+main .card-container .card-text .second_section .daily_weather_side {
+  width: 62%;
+  display: grid;
+  grid-template-columns: repeat(5, 7rem);
 }

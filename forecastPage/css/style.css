@@ -34,12 +34,26 @@ a {
   font-family: LightPoppins;
 }
 
+.profil {
+  width: 3rem;
+  max-width: 100%;
+  min-height: 3rem;
+  border-radius: 50%;
+  background-color: rgb(189, 170, 170);
+  position: relative;
+  bottom: 10px;
+}
+
+.comments {
+  color: #c4c1c1;
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   background-color: rgb(43, 2, 43);
   padding: 10px;
@@ -53,6 +67,7 @@ nav .logo_side {
 }
 nav .logo_side .logo {
   display: flex;
+  flex-wrap: wrap;
 }
 nav .logo_side .logo .logo_name {
   font-size: 1rem;
@@ -100,7 +115,6 @@ nav .logo_side img {
 
 main .card-container {
   max-width: 70vw;
-  max-height: 36rem;
   margin: auto;
   box-shadow: 10px 5px 20px black;
 }
@@ -112,12 +126,12 @@ main .card-container .card-text {
 main .card-container .card-text .first_section {
   background-image: url("../photos/france.webp");
   background-repeat: no-repeat;
+  background-size: cover;
   background-clip: border-box;
   background-position: center;
   padding: 15px 25px;
-  min-width: 100%;
+  max-width: 100%;
   min-height: 18rem;
-  background-color: green;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -163,8 +177,8 @@ main .card-container .card-text .first_section .location {
 }
 main .card-container .card-text .first_section .location p {
   color: white;
-  line-height: 22px;
-  letter-spacing: 5px;
+  line-height: 1.375rem;
+  letter-spacing: 0.3125rem;
   font-size: 2rem;
 }
 main .card-container .card-text .first_section .location p::after {
@@ -178,7 +192,68 @@ main .card-container .card-text .first_section .location p::after {
   left: 2rem;
 }
 main .card-container .card-text .second_section {
-  min-width: 100%;
-  min-height: 50%;
-  background-color: red;
+  max-width: 100%;
+  min-height: 20rem;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 25px;
+}
+main .card-container .card-text .second_section .twitter_side {
+  max-width: 38%;
+  display: flex;
+  flex-flow: column wrap;
+}
+main .card-container .card-text .second_section .twitter_side .twitter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+main .card-container .card-text .second_section .twitter_side .twitter i {
+  color: rgb(53, 147, 147);
+  font-size: 2rem;
+  position: relative;
+  top: 6px;
+}
+main .card-container .card-text .second_section .twitter_side .twitter h3 {
+  color: rgb(48, 20, 62);
+  font-size: 2rem;
+  margin-left: 5px;
+}
+main .card-container .card-text .second_section .twitter_side .twitter span {
+  font-size: 1rem;
+  color: #ddd;
+}
+main .card-container .card-text .second_section .twitter_side .commentss {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+main .card-container .card-text .second_section .twitter_side .commentss .comment {
+  margin-top: 15px;
+}
+main .card-container .card-text .second_section .twitter_side .next_sidde .next {
+  margin-top: 1.8rem;
+  color: rgb(103, 31, 114);
+  letter-spacing: 7px;
+  line-height: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+main .card-container .card-text .second_section .twitter_side .next_sidde .next span {
+  color: rgb(219, 1, 1);
+}
+main .card-container .card-text .second_section .daily_weather_side {
+  max-width: 62%;
+  display: flex;
+  flex-flow: row wrap;
+  margin-inline: auto;
+  gap: 5px;
+}
+main .card-container .card-text .second_section .daily_weather_side .box .weekday-weather .weather-photo img {
+  max-width: 7.6rem;
+  min-height: 8rem;
 }/*# sourceMappingURL=style.css.map */
