@@ -1,0 +1,48 @@
+.containerCard {
+    max-width: 50vw;
+    min-height: 60vh;
+    border: 2px solid blue;
+
+    .btn-info {
+        border: 3px solid navy;
+        color: navy;
+        letter-spacing: 2px;
+        font-weight: 500;
+        border-radius: 5px;
+
+
+
+
+
+    }
+
+    form {
+        input {
+            outline: none;
+            background-color: pink;
+            text-decoration: none;
+            border: 2px solid hotpink;
+            border-radius: 8px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            padding: 5px;
+            margin: 10px 8px;
+
+        }
+    }
+}
+
+.check {
+    font-weight: 500;
+    display: none;
+    color: rgb(236, 71, 118);
+
+
+    h3 {
+        color: black;
+    }
+
+    .resultinfo {
+        color: navy;
+    }
+}
