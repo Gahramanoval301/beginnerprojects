@@ -1,0 +1,48 @@
+.container{
+    width: 90%;
+    height: 450px;
+    border:10px solid rebeccapurple;
+    margin-inline: auto;
+    position: relative;
+    margin-top:5rem;
+    box-shadow: 10px 1px 12px black;
+}
+.container h3{
+    text-align: center;
+    font-family: cursive;
+    cursor:pointer;
+}
+
+.cow img{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    cursor:alias;
+}
+.button-container{
+    width: fit-content;
+    padding: 1rem;
+    border:2px solid;
+    margin:2rem auto;
+    box-shadow: 2px 2px 12px black;
+ }
+ .button-container h1{
+    text-align: center;
+ }
+
+.btn{
+    padding: 1rem 2rem;
+    background-color: pink;
+    outline: none;
+    border:3px solid navy;
+    border-radius: 5px;
+    cursor:pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 24px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition:all 300ms linear;
+}
+.btn:hover{
+    background-color: rgb(214, 159, 167);
+}

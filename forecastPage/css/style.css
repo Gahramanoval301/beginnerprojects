@@ -193,7 +193,6 @@ main .card-container .card-text .first_section .location p::after {
 }
 main .card-container .card-text .second_section {
   max-width: 100%;
-  min-height: 20rem;
   background-color: black;
   display: flex;
   flex-wrap: wrap;
@@ -203,6 +202,7 @@ main .card-container .card-text .second_section {
 main .card-container .card-text .second_section .twitter_side {
   max-width: 38%;
   display: flex;
+  justify-content: space-evenly;
   flex-flow: column wrap;
 }
 main .card-container .card-text .second_section .twitter_side .twitter {
@@ -249,11 +249,11 @@ main .card-container .card-text .second_section .twitter_side .next_sidde .next 
 main .card-container .card-text .second_section .daily_weather_side {
   max-width: 62%;
   display: flex;
+  justify-content: center;
   flex-flow: row wrap;
-  margin-inline: auto;
   gap: 5px;
 }
 main .card-container .card-text .second_section .daily_weather_side .box .weekday-weather .weather-photo img {
-  max-width: 7.6rem;
-  min-height: 8rem;
+  max-width: 10rem;
+  min-height: 10rem;
 }/*# sourceMappingURL=style.css.map */
