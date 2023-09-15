@@ -73,10 +73,13 @@ header nav .icons a {
   font-size: 1.25rem;
   color: rgb(25, 146, 23);
 }
-header nav .icons #menu {
+header nav .icons .menu {
   display: none;
 }
 
+nav .star {
+  transition: 600ms ease-in-out;
+}
 nav .logo p:hover span {
   background-color: rgba(175, 66, 84, 0.294);
   color: rgba(69, 113, 170, 0.946);
@@ -92,4 +95,20 @@ nav .navigation-bar .active:hover {
 nav .icons a:hover {
   color: rgb(126, 191, 34);
   transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 1012px) {
+  .icons {
+    margin-inline: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .icons .menu {
+    display: inline-block;
+  }
 }/*# sourceMappingURL=header.css.map */

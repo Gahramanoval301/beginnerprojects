@@ -1,3 +1,5 @@
+@import './home';
+
 //  TODO HEADER-SIDE CSS STYLES
 * {
     margin: 0;
@@ -87,14 +89,20 @@ header {
 
             }
 
-            #menu {
+            .menu {
                 display: none;
             }
         }
     }
 }
 
+//TODO HEADER-SIDE TRASNFROM-TRANSITIONS
+
 nav {
+    .star {
+        transition: 600ms ease-in-out;
+    }
+
     .logo {
         p:hover {
             span {
@@ -126,4 +134,24 @@ nav {
     }
 }
 
-//TODO HEADER-SIDE TRASNFROM-TRANSITIONS
+//TODO header-side media-query
+@media screen and (max-width: 1012px) {
+    .icons {
+        margin-inline: auto;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .icons {
+        .menu {
+            display: inline-block;
+        }
+    }
+}
