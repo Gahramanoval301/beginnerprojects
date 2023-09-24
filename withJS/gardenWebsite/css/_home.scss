@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(237, 193, 200);
+}
+
+section {
+    margin: 3rem 2rem;
+}
+
+.home {
+    min-height: 100vh;
+    border: 2px solid;
+    background-image: url('../photos/gardenHome.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    // filter: brightness(70%);
+    filter: opacity(70%);
+    filter: contrast(50%);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: start;
+
+
+    .welcome {
+        position: relative;
+        z-index: 100;
+        padding: 15px 20px;
+        color: white;
+        text-shadow: 0px 0px 10px pink;
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        #text {
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 1.5px;
+        }
+    }
+}

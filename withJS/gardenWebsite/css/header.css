@@ -1,3 +1,39 @@
+body {
+  background-color: rgb(237, 193, 200);
+}
+
+section {
+  margin: 3rem 2rem;
+}
+
+.home {
+  min-height: 100vh;
+  border: 2px solid;
+  background-image: url("../photos/gardenHome.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: opacity(70%);
+  filter: contrast(50%);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: start;
+}
+.home .welcome {
+  position: relative;
+  z-index: 100;
+  padding: 15px 20px;
+  color: white;
+  text-shadow: 0px 0px 10px pink;
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.home .welcome #text {
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +44,25 @@
   flex-wrap: wrap;
   text-wrap: pretty;
   transition: all 500ms;
+}
+
+.autorname {
+  margin-top: 2rem;
+  margin-left: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.4rem;
+  line-height: 24px;
+  color: rgb(69, 113, 170);
+}
+
+.shadow span {
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: rgb(175, 66, 84);
+  background-color: rgba(69, 113, 170, 0.446);
+  padding: 5px;
+  border-radius: 4px;
+  font-style: oblique;
 }
 
 header nav {
@@ -108,7 +163,8 @@ nav .icons a:hover {
   }
 }
 @media screen and (max-width: 450px) {
-  .icons .menu {
+  .icons a {
     display: inline-block;
+    margin-inline: 5px;
   }
 }/*# sourceMappingURL=header.css.map */
