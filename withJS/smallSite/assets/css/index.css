@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, rgb(94, 22, 194), rgba(12, 72, 162, 0.959), rgb(163, 62, 79));
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.home{
+    width: 80%;
+    margin: 3rem auto;
+    padding: 1.5rem 2rem;
+    box-shadow: 0px 0px 50px rgba(242, 190, 199, 0.553);
+}
+.home .homeCard{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 1rem;
+}
+.home .homeCard .header h1{
+    text-align: center;
+    color: rgb(66, 10, 81);
+    letter-spacing: 4px;
+    text-shadow: 2px 1px;
+}
+.home .homeCard .header .navigation ul{
+    display:flex;
+    flex-flow: row wrap;
+    list-style: none;
+    gap: 1rem;
+}
+.home .homeCard .header .navigation ul .appList  h3{
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: white;
+}
+.home .homeCard .header .navigation .appList .icon img {
+   max-height: 180px;
+   height: 100%;
+}
+.home .homeCard .designs .mainDesign img{
+  background-color: blue;
+  box-shadow: 0 0 10px black;
+  border-radius: 6rem;
+  width: 100%;
+}
+.home .homeCard .designs .freeDesigns i:nth-of-type(1)
+{
+    top: 2rem;
+    left: 3rem;
+    z-index: -10;
+    opacity: 0.2;
+}
+.home .homeCard .designs .freeDesigns i:nth-of-type(2)
+{
+    bottom: 4rem;
+    right: 3rem;
+    z-index: -10;
+    opacity: 0.7;
+}
+.home .homeCard .designs .freeDesigns i:nth-of-type(3){
+    top: 4rem;
+    right: 4rem;
+    z-index: -10;
+    opacity: 0.8;
+}
+.home .homeCard .designs .freeDesigns i:nth-of-type(4){
+    top: 10rem;
+    left:10rem;
+    z-index: -10;
+    opacity: 0.8;
+}
+.home .homeCard .designs .freeDesigns img{
+   max-height: 120px;
+   height: 100%;
+}
+.home .homeCard .designs .freeDesigns i{
+    position: absolute;
+}
+.home .homeCard footer h2{
+    letter-spacing: 1rem;
+}
